@@ -1,21 +1,25 @@
-// create object with factory function
-const objOne = function (width, height) {
+//create an object with factory fuction
+
+const obj = function (width, height) {
    return {
       width: width,
       height: height,
       area: function () {
-         return this.width * this.height
+         console.log(`width is ${this.width}`);
+         console.log(`height is ${this.height}`);
+         return this.width * this.height;
       }
    }
 }
 
-const printObjOne = objOne(10, 20);
-console.log(printObjOne);
-console.log(printObjOne.area());
+const PrintOne = obj(10, 20);
+console.log(PrintOne);
+PrintOne.area();
+console.log(PrintOne.area());
 
-
-const printObjTwo = objOne(20, 20);
-console.log(printObjTwo);
-console.log(printObjTwo.area());
+const printTwo = obj(20, 30);
+console.log(printTwo);
+printTwo.area();
+console.log(printTwo.area());
 
 // factory function diea object create korar jonno protom e akta function expression declare kore argument hishabe ja ja chai se gula nite hobe. then retunr statment er moddhe oi gula diea akta object create korte hobe.
